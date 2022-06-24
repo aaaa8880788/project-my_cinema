@@ -1,0 +1,84 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/movie/movie",
+			"style": {
+				"navigationBarTitleText": "电影",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/cinema/cinema",
+			"style": {
+				"navigationBarTitleText": "影院",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"subPackages": [{
+		"root": "subPackages",
+		"pages": [
+			
+		{
+                    "path" : "movie-detail/movie-detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "电影", 
+                    "enablePullDownRefresh": false,
+					"navigationBarBackgroundColor":"#4c6a72",
+					"navigationBarTextStyle":"white"
+                }
+                
+                }
+            ]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#b8f5ff"
+	},
+	"tabBar": {
+		"color": "black",
+		"selectedColor": "#c00000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/image/tab-bar/home.png",
+				"selectedIconPath": "static/image/tab-bar/home-active.png",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/movie/movie",
+				"iconPath": "static/image/tab-bar/movie.png",
+				"selectedIconPath": "static/image/tab-bar/movie-active.png",
+				"text": "电影"
+			},
+			{
+				"pagePath": "pages/cinema/cinema",
+				"iconPath": "static/image/tab-bar/cinema.png",
+				"selectedIconPath": "static/image/tab-bar/cinema-active.png",
+				"text": "影院"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/image/tab-bar/mine.png",
+				"selectedIconPath": "static/image/tab-bar/mine-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

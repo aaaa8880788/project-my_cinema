@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "影院",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-top": "../../components/nav-top/nav-top",
+    "cinema-list": "../../components/cinema-list/cinema-list"
+  }
+}

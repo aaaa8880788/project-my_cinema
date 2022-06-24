@@ -1,0 +1,34 @@
+.mine-top.data-v-dcbcfe34 {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mine-top .user-info.data-v-dcbcfe34 {
+  padding: 0 50rpx;
+}
+.mine-top .user-info .avatar.data-v-dcbcfe34 {
+  margin: 0 auto;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 100%;
+  box-shadow: 0 0 15rpx 10rpx #ccc;
+}
+.mine-top .user-info .name.data-v-dcbcfe34 {
+  font-weight: 700;
+  font-size: 40rpx;
+  margin: 20rpx;
+}
+.mine-top .user-info .sign.data-v-dcbcfe34 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mine-main.data-v-dcbcfe34 {
+  background-color: #f6f6f6;
+  height: var(--dcbcfe34-wh);
+  overflow: hidden;
+}

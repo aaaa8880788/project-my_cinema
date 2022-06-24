@@ -1,0 +1,137 @@
+@import './variables.scss';
+
+
+
+// 文字显示位置text-align
+@each $var in (left, center, right,justify) {
+    .text-#{$var} {
+      text-align: $var !important;
+    }
+}
+
+// 文字、背景颜色部分color、background-color
+@each $colorKey, $colorVal in $colors {
+    .text-#{$colorKey} {
+        color:$colorVal;
+    }
+    .bgc-#{$colorKey} {
+        background-color:$colorVal;
+    }
+}
+// 字体大小部分font-size
+@each $sizeKey,$sizeVal in $font-sizes {
+    .fs-#{$sizeKey} {
+        font-size: $sizeVal;
+    }
+}
+// font-weight
+.fw{
+    font-weight: 700;
+}
+
+// text overflow
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	display: inline-block;
+	width: 100%;
+}
+// width, height
+@each $sizeKey,$sizeVal in $pc {
+    .w-#{$sizeKey} {
+        width: $sizeVal;
+    }
+}
+@each $sizeKey,$sizeVal in $pc {
+    .h-#{$sizeKey} {
+        height: $sizeVal;
+    }
+}
+
+//border-radius
+@each $sizeKey,$sizeVal in $spacing-sizes {
+    .br-#{$sizeKey} {
+        border-radius: $sizeVal;
+    }
+}
+
+// flex
+.d-flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-1 {
+    flex: 1;
+  }
+.flex-grow-1 {
+    flex-grow: 1;
+}
+// justify-content
+@each $key, $value in $flex-jc {
+    .jc-#{$key} {
+      justify-content: $value;
+    }
+  }
+// align-items
+@each $key, $value in $flex-ai {
+    .ai-#{$key} {
+      align-items: $value;
+    }
+}
+
+@each $typeKey, $type in $spacing-types {
+    // margin、padding
+    // m-5、p-5
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typeKey}-#{$sizeKey} {
+        #{$type}: $size;
+      }
+    }
+    // m-l-5、p-l-5
+    @each $dirKey,$dir in $spacing-directions {
+        @each $sizeKey,$size in $spacing-sizes   {
+            .#{$typeKey}-#{$dirKey}-#{$sizeKey}{
+                #{$type}-#{$dir}:#{$size}
+            }
+        }    
+    }
+}
+
+
+page {
+		background-color: map-get($colors, 'primary');
+}
+
+.top-nav{
+		position: sticky;
+		top: 0;
+		z-index: 999;
+}
+.bgc-image{
+	display: flex;
+	position: fixed;
+	z-index: 50;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	.icon-nothing{
+		font-size: 200rpx
+	}
+	view{
+		display: flex;
+		flex-direction: column;
+		text{
+			margin: 10rpx;
+		}
+	}
+}
+image{
+	vertical-align: middle;
+}
